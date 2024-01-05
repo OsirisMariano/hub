@@ -30,3 +30,5 @@ bundle install
 ~~~
 Rails s
 ~~~
+
+![ezgif com-optimize](https://github.com/OsirisMariano/hub/assets/38112205/db010993-0a33-421e-92ef-ac7256985bec)
