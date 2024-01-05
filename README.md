@@ -1,26 +1,32 @@
-# README
+# Hub - Um WebApp de armazenamento de anotações
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O objetivo do Hub é otimizar sua produtividade, armazenando suas anotações e simplifincando sua vida, uma nota de cada vez.
 
-Things you may want to cover:
+## Técnologias necessárias
 
-* Ruby version
+* Ruby: 3.0.1
+* Rails: 7.1.8
+* Bootstrap: 5.3
+* SQLite3: 1.4
 
-* System dependencies
+## Para executar o projeto
 
-* Configuration
+### Clone em sua máquina
+~~~
+git clone https:///github.com/OsirisMariano/hub
+~~~
 
-* Database creation
+### Entre no projeto
+~~~
+cd hub
 
-* Database initialization
+~~~
+### Instale as dependências
+~~~
+bundle install
+~~~
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# hub
-# hub
+### Execute a aplicação
+~~~
+Rails s
+~~~
