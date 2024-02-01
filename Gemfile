@@ -15,6 +15,9 @@ gem "bootsnap", require: false
 gem 'devise', '~> 4.9', '>= 4.9.3'
 gem 'haml', '~> 6.3'
 gem 'simple_form', '~> 5.3'
+gem 'sassc', '~> 2.0.0'
+gem 'normalize-rails'
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -24,7 +27,7 @@ group :development do
   gem "web-console"
 end
 
-group :test do
+group :test do  
   gem "capybara"
   gem "selenium-webdriver"
 
