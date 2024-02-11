@@ -15,7 +15,7 @@
       %nav
         - if user_signed_in?
           = link_to "Create Doc", new_doc_path
-          = link_to "Sign Out", destroy_user_session_path, method: :delete, 'data-turbo-action': 'replace'
+          = button_to "Sign Out", destroy_user_session_path, method: :delete, 'data-turbo-action': 'replace'
         
         - else
           = link_to "Log In", new_user_session_path 
