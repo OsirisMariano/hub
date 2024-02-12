@@ -1,8 +1,15 @@
-/*
- *= require_self
- */
+// application.css.scss
 
- @import 'normalize.css.scss';
- @import "global.css.scss";
- @import "docs.css.scss";
- @import "welcome.css.scss";
+@import 'normalize.css.scss';
+@import 'global.css.scss';
+@import 'docs.css.scss';
+@import 'welcome.css.scss';
+
+// Adicione o Bootstrap
+@import "bootstrap";
+
+// Se você precisar personalizar estilos específicos do Bootstrap, faça isso após a importação do Bootstrap.
+// Exemplo:
+// @import "your-custom-styles.css.scss";
+
+// Restante do seu código...
