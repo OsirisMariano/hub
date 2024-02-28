@@ -21,6 +21,8 @@ gem "sassc-rails", "~> 2.1.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'mutex_m'
+  gem 'bigdecimal'
 end
 
 group :development do
