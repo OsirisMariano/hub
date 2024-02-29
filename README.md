@@ -4,7 +4,7 @@ O objetivo do Hub é otimizar sua produtividade, armazenando suas anotações e 
 
 ## Técnologias necessárias
 
-* Ruby: 3.0.1
+* Ruby: 3.3.0
 * Rails: 7.1.8
 * Bootstrap: 5.3
 * SQLite3: 1.4

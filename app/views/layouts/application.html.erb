@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hub</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+<head>
+  <title>Hub | Your Lifes' Work!</title>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+</head>
+<body>
+  <header>
+    <div class="header_inner">
+      <%= link_to "Hub", root_path, id: "logo" %>
 
-  <body>
-    <%= yield %>
-  </body>
+      <nav>
+        <% if user_signed_in? %>
+          <%= link_to "Create Doc", new_doc_path %>
+          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, 'data-turbo-action': 'replace' %>
+        <% else %>
+          <%= link_to "Log In", new_user_session_path %>
+        <% end %>
+      </nav>
+    </div>
+  </header>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
+</body>
 </html>

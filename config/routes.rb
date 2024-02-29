@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  get 'welcome/index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :docs
+  authenticated :user do
+    root 'docs#index', as: 'authenticated_root'
+  end
+
+  root 'welcome#index'
 end
