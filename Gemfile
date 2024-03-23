@@ -24,6 +24,8 @@ group :development, :test do
   gem "bigdecimal"
   gem "debug", platforms: [:mri, :mingw, :x64_mingw]
   gem "mutex_m"
+  gem "faker"
+  gem "tty-spinner"
 end
 
 group :development do
