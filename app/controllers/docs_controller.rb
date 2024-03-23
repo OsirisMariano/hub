@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class DocsController < ApplicationController
-  before_action :find_doc, only: %i[edit update show destroy]
+  before_action :find_doc, only: [:edit, :update, :show, :destroy]
 
   def index
     @docs = Doc.where(user_id: current_user)
@@ -15,9 +17,9 @@ class DocsController < ApplicationController
     @doc = current_user.docs.build(doc_params)
 
     if @doc.save
-      redirect_to @doc
+      redirect_to(@doc)
     else
-      render 'new'
+      render("new")
     end
   end
 
@@ -25,15 +27,15 @@ class DocsController < ApplicationController
 
   def update
     if @doc.update(doc_params)
-      redirect_to @doc
+      redirect_to(@doc)
     else
-      render 'edit'
+      render("edit")
     end
   end
 
   def destroy
     @doc.destroy
-    redirect_to docs_path
+    redirect_to(docs_path)
   end
 
   private
