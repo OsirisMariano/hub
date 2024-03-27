@@ -5,7 +5,7 @@
 
     <div class="buttons">
       <%= link_to "All Docs", docs_path(@doc), class: "button" %>
-      <%= link_to "Edit Doc", edit_doc_path(@doc) %>
+      <%= link_to "Edit Doc", edit_administrate_doc_path(@doc) %>
       <%= button_to "Trash It", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: "button" %>
     </div>
   </div>
