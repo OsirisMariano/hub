@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     resources :docs
   end
 
-  #get "welcome/index"
-  #root "docs#index", as: "authenticated_root"
+  # get "welcome/index"
+  # root "docs#index", as: "authenticated_root"
 
   root "welcome#index"
 end
