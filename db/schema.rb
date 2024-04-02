@@ -16,13 +16,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_23_195805) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "docs", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-  end
+# Could not dump table "docs" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
