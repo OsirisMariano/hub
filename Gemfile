@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.3.0"
 gem "bootstrap", "~> 5.3", ">= 5.3.2"
+gem "cssbundling-rails", "~> 1.4"
 gem "devise", "~> 4.9", ">= 4.9.3"
 gem "importmap-rails"
 gem "jbuilder"
@@ -38,5 +39,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "cssbundling-rails", "~> 1.4"
