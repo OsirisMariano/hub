@@ -10,14 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_31_091543) do
-  create_table "docs", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
+ActiveRecord::Schema[7.0].define(version: 2024_04_03_003036) do
+# Could not dump table "active_storage_attachments" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "active_storage_blobs" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "active_storage_variant_records" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+  create_table "articles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
+
+# Could not dump table "docs" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -31,4 +40,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_31_091543) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end

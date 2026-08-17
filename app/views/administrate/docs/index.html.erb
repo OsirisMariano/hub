@@ -2,18 +2,18 @@
   <div id="docs" class="clearfix">
     <% unless @docs.blank? %>
       <% @docs.each do |doc| %>
-        <a href="<%= url_for [doc] %>">
+        <%= link_to administrate_doc_path(doc) do %>
           <div class="doc">
             <p class="title"><%= doc.title %></p>
             <p class="date"><%= time_ago_in_words(doc.created_at) %></p>
             <p class="content"><%= truncate(doc.content, length: 50) %></p>
           </div>
-        </a>
+        <% end %>
       <% end %>
     <% else %>
       <h2>Create Doc!</h2>
       <p>Start Creating Document and Organizing your life!</p>
-      <%= button_to "Create Doc", new_doc_path, method: :get, class: "button" %>
+      <%= button_to "Create Doc", new_administrate_doc_path, method: :get, class: "button" %>
     <% end %>
   </div>
 </div>
